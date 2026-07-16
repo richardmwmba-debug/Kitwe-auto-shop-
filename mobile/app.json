@@ -1,0 +1,18 @@
+{
+  "expo": {
+    "name": "Kitwe Auto Shop",
+    "slug": "kitwe-auto-shop",
+    "version": "1.0.0",
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTabletMode": true,
+      "bundleIdentifier": "com.kitweautoshop.mobile"
+    },
+    "android": {
+      "package": "com.kitweautoshop.mobile"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    }
+  }
+}

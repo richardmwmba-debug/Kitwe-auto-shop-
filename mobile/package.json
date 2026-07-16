@@ -1,0 +1,28 @@
+{
+  "name": "kitwe-auto-shop-mobile",
+  "version": "1.0.0",
+  "description": "React Native mobile app for Kitwe Auto Shop",
+  "main": "node_modules/expo/AppEntry.js",
+  "scripts": {
+    "start": "expo start",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
+    "web": "expo start --web",
+    "test": "jest"
+  },
+  "dependencies": {
+    "expo": "^49.0.0",
+    "react": "18.2.0",
+    "react-native": "0.72.4",
+    "react-navigation": "^6.1.0",
+    "react-navigation-native": "^6.1.0",
+    "@reduxjs/toolkit": "^1.9.5",
+    "react-redux": "^8.1.1",
+    "axios": "^1.5.0",
+    "expo-sqlite": "^13.4.0"
+  },
+  "devDependencies": {
+    "jest": "^29.6.0"
+  },
+  "private": true
+}
