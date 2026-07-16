@@ -1,32 +1,28 @@
 const express = require('express');
-const jwt = require('jsonwebtoken');
-const User = require('../models/User');
-
 const router = express.Router();
 
-router.post('/login', async (req, res) => {
-  try {
-    const { email, password } = req.body;
-    const user = await User.findOne({ where: { email } });
-    
-    if (!user || !(await user.validatePassword(password))) {
-      return res.status(401).json({ error: 'Invalid credentials' });
-    }
-
-    const token = jwt.sign(
-      { id: user.id, email: user.email, role: user.role },
-      process.env.JWT_SECRET,
-      { expiresIn: process.env.JWT_EXPIRE }
-    );
-
-    res.json({ token, user: { id: user.id, email: user.email, role: user.role } });
-  } catch (error) {
-    res.status(400).json({ error: error.message });
-  }
+// POST /api/auth/login
+router.post('/login', (req, res) => {
+  // TODO: Implement login logic
+  res.json({ message: 'Login endpoint - to be implemented' });
 });
 
+// POST /api/auth/register
+router.post('/register', (req, res) => {
+  // TODO: Implement registration logic
+  res.json({ message: 'Register endpoint - to be implemented' });
+});
+
+// POST /api/auth/refresh
 router.post('/refresh', (req, res) => {
-  res.json({ message: 'Token refreshed' });
+  // TODO: Implement token refresh logic
+  res.json({ message: 'Refresh token endpoint - to be implemented' });
+});
+
+// POST /api/auth/logout
+router.post('/logout', (req, res) => {
+  // TODO: Implement logout logic
+  res.json({ message: 'Logout endpoint - to be implemented' });
 });
 
 module.exports = router;

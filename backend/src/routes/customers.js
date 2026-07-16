@@ -1,24 +1,28 @@
 const express = require('express');
-const Customer = require('../models/Customer');
-
 const router = express.Router();
 
-router.get('/', async (req, res) => {
-  try {
-    const customers = await Customer.findAll();
-    res.json(customers);
-  } catch (error) {
-    res.status(500).json({ error: error.message });
-  }
+// GET /api/customers
+router.get('/', (req, res) => {
+  // TODO: Implement get all customers
+  res.json({ message: 'Get all customers - to be implemented' });
 });
 
-router.post('/', async (req, res) => {
-  try {
-    const customer = await Customer.create(req.body);
-    res.status(201).json(customer);
-  } catch (error) {
-    res.status(400).json({ error: error.message });
-  }
+// GET /api/customers/:id
+router.get('/:id', (req, res) => {
+  // TODO: Implement get customer by ID
+  res.json({ message: 'Get customer by ID - to be implemented' });
+});
+
+// POST /api/customers
+router.post('/', (req, res) => {
+  // TODO: Implement create customer
+  res.json({ message: 'Create customer - to be implemented' });
+});
+
+// PUT /api/customers/:id
+router.put('/:id', (req, res) => {
+  // TODO: Implement update customer
+  res.json({ message: 'Update customer - to be implemented' });
 });
 
 module.exports = router;
